@@ -8,11 +8,17 @@
   </head>
 
   <body>
-    <form class="" action="index.html" method="post">
-      <input type="text" name="" placeholder="correo electronico"><br>
-      <input type="text" name="" placeholder="Usuario"><br>
-      <input type="text" name="" placeholder="Contraseña"><br>
-      <button type="button" name="Registrar"></button>
+    <form class="" acion="{% url 'index' %}" method="post">
+      {% csrf_token %}
+      <input type="text" name="correo" placeholder="correo electronico"><br>
+      <input type="text" name="nombre_completo" placeholder="Nombre completo"><br>
+      <input type="text" name="usuario" placeholder="usuario"><br>
+      <input type="password" name="password" placeholder="password"><br>
+
+    </div>
+    <input type="submit" name="registrar" value="registrar">
+
+      </div>
     </form>
   </body>
 </html>
